@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153.19 73.88">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        fill: #f5cac3;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #e2a8a1;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: #f7ede2;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        fill: #fff;
+        font-family: Rubik-Bold, Rubik;
+        font-size: 27.8px;
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="desktop_home" data-name="desktop/home">
+    <path class="cls-2" d="M16.02,2.5h85.7c27.03,0,48.97,21.94,48.97,48.97v5.77c0,7.8-6.33,14.13-14.13,14.13H16.02c-7.46,0-13.52-6.06-13.52-13.52V16.02c0-7.46,6.06-13.52,13.52-13.52Z" transform="translate(153.19 73.88) rotate(-180)"/>
+    <circle class="cls-3" cx="17.18" cy="16.1" r="5.54"/>
+    <text class="cls-6" transform="translate(36.96 36.81)"><tspan class="cls-5" x="0" y="0">son</tspan><tspan class="cls-1" x="49.84" y="0">n</tspan><tspan class="cls-4" x="67.04" y="0">y</tspan><tspan class="cls-5" x="83.05" y="0">s</tspan></text>
+    <text class="cls-6" transform="translate(45.34 60.61)"><tspan x="0" y="0">on sale</tspan></text>
+  </g>
+</svg>
