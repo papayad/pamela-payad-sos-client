@@ -1,0 +1,68 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  background-color: $sos-white;
+  height: 15vh;
+  position: relative;
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+  }
+
+  &__logo-img {
+    width: 10rem;
+  }
+
+  &__menu {
+    &--mobile {
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__burger {
+    background-color: $sos-blue;
+  }
+
+  &__burger-item {
+    color: red;
+  }
+}
+
+.bm-burger-bars {
+  background: $sos-darkwhite;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 2.25rem;
+  height: 1.875rem;
+  right: 2.25rem;
+  top: 2.25rem;
+}
+
+.bm-cross-button {
+  background-color: white;
+}
+
+.bm-item-list {
+  padding: 2rem;
+}
+
+.bm-item {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+
+  @include tablet-desktop {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
