@@ -5,17 +5,32 @@
 
 .header {
   background-color: $sos-white;
-  height: 15vh;
+  height: 25vh;
   position: relative;
+
+  @include desktop {
+    display: flex;
+    height: 25vh;
+  }
 
   &__logo {
     position: absolute;
     top: 50%;
-    right: 30%;
+    right: 50%;
+    transform: translate(50%, 10%);
+
+    @include desktop {
+      right: 50%;
+      transform: translate(50%, -15%);
+    }
   }
 
   &__logo-img {
     width: 10rem;
+
+    @include desktop {
+      width: 15rem;
+    }
   }
 
   &__menu {
@@ -30,8 +45,46 @@
     background-color: $sos-blue;
   }
 
-  &__burger-item {
-    color: red;
+  &__nav--desktop {
+    display: none;
+
+    @include desktop {
+      padding: 1rem 2rem;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-content: flex-end;
+    }
+  }
+
+  &__nav-container {
+    display: flex;
+    align-items: flex-end;
+    width: 30%;
+    gap: 10%;
+
+    &--left {
+      @extend .header__nav-container;
+      justify-content: flex-end;
+    }
+  }
+
+  &__nav-item {
+    @include nav-type;
+    list-style-type: none;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: black;
+
+    &--signup {
+      @extend .header__nav-link;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      background-color: $sos-yellow;
+    }
   }
 }
 
@@ -47,18 +100,18 @@
   top: 2.25rem;
 }
 
-.bm-cross-button {
+.bm-cross {
   background-color: white;
 }
 
 .bm-item-list {
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .bm-item {
   text-decoration: none;
   color: white;
-  font-size: 1.25rem;
+  @include nav-type;
   line-height: 1.75rem;
 
   @include tablet-desktop {

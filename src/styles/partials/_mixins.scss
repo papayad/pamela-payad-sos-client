@@ -12,3 +12,8 @@
     @content;
   }
 }
+
+@mixin nav-type {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
