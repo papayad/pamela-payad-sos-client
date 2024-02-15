@@ -1,0 +1,125 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  background-color: $sos-white;
+  height: 25vh;
+  position: relative;
+
+  @include desktop {
+    display: flex;
+    height: 25vh;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 10%);
+
+    @include desktop {
+      right: 50%;
+      transform: translate(50%, -15%);
+    }
+  }
+
+  &__logo-img {
+    width: 10rem;
+
+    @include tablet-desktop {
+      width: 12rem;
+    }
+
+    @include desktop {
+      width: 15rem;
+    }
+  }
+
+  &__menu {
+    &--mobile {
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__burger {
+    background-color: $sos-blue;
+  }
+
+  &__nav--desktop {
+    display: none;
+
+    @include desktop {
+      padding: 1rem 2rem;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-content: flex-end;
+    }
+  }
+
+  &__nav-container {
+    display: flex;
+    align-items: flex-end;
+    width: 30%;
+    gap: 10%;
+
+    &--left {
+      @extend .header__nav-container;
+      justify-content: flex-end;
+    }
+  }
+
+  &__nav-item {
+    @include nav-type;
+    list-style-type: none;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: black;
+
+    &--signup {
+      @extend .header__nav-link;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      background-color: $sos-yellow;
+    }
+  }
+}
+
+.bm-burger-bars {
+  background: $sos-darkwhite;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 2.25rem;
+  height: 1.875rem;
+  right: 2.25rem;
+  top: 2.25rem;
+}
+
+.bm-cross {
+  background-color: white;
+}
+
+.bm-item-list {
+  padding: 3rem;
+}
+
+.bm-item {
+  text-decoration: none;
+  color: white;
+  @include nav-type;
+  line-height: 1.75rem;
+
+  @include tablet-desktop {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
