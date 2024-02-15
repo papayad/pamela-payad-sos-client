@@ -28,6 +28,10 @@
   &__logo-img {
     width: 10rem;
 
+    @include tablet-desktop {
+      width: 12rem;
+    }
+
     @include desktop {
       width: 15rem;
     }
