@@ -40,11 +40,11 @@
   &__input {
     width: 95%;
     padding: 0.5rem;
-    margin: 0.5rem;
     border: none;
     border-bottom: solid;
 
     @include desktop {
+      margin: 0.5rem;
       width: 80%;
       text-align: center;
     }

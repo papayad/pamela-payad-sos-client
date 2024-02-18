@@ -1,0 +1,97 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.form {
+  display: flex;
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &__img-placeholder {
+    border: solid;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    width: 17rem;
+    height: 17rem;
+
+    @include desktop {
+      width: 24em;
+      height: 24rem;
+      margin: 2rem;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__details-inputs-container {
+    @include desktop {
+      padding: 2rem;
+      width: 50%;
+    }
+  }
+
+  &__details-heading {
+    padding: 1rem 0;
+  }
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    font-size: 0.75rem;
+  }
+
+  &__dropdown {
+    border: none;
+    border-bottom: solid;
+    padding: 1rem 0.5rem;
+  }
+
+  &__price {
+    @extend .form__dropdown;
+    width: 5rem;
+  }
+
+  &__input {
+    margin: none;
+  }
+
+  &__email {
+    width: 95%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: solid;
+  }
+
+  &__button {
+    width: 100%;
+    margin: 1rem;
+
+    @include tablet-desktop {
+      width: 10rem;
+      margin: auto;
+    }
+  }
+}
