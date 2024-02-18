@@ -4,7 +4,7 @@ import "./AuthForm.scss";
 function AuthForm({ formHeading, formButton }) {
   return (
     <form className="form">
-      <h2 className="form__heading">login{formHeading}</h2>
+      <h2 className="form__heading">{formHeading}</h2>
       <div className="form__input-container--desktop">
         <input
           className="form__input"
@@ -22,7 +22,7 @@ function AuthForm({ formHeading, formButton }) {
         />
       </div>
       <button className="form__button" type="submit">
-        login{formButton}
+        {formButton}
       </button>
     </form>
   );
