@@ -36,6 +36,10 @@
     flex-direction: row;
   }
 
+  &__series {
+    font-style: italic;
+  }
+
   &__open-icon {
     width: 2rem;
     filter: invert(100%);
