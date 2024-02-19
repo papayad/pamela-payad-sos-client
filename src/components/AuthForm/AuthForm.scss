@@ -1,0 +1,60 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  border-radius: 20px;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin: auto;
+  width: 90%;
+
+  @include tablet-desktop {
+    padding: 4rem;
+    width: 70%;
+    margin: auto;
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
+
+  &__heading {
+    padding: 1rem 2rem;
+  }
+
+  &__input-container {
+    justify-items: center;
+
+    &--desktop {
+      @include desktop {
+        display: flex;
+      }
+    }
+  }
+
+  &__input {
+    width: 95%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: solid;
+
+    @include desktop {
+      margin: 0.5rem;
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 20px;
+    width: 5rem;
+    border: solid;
+  }
+}

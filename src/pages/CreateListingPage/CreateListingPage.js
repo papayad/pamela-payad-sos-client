@@ -1,7 +1,11 @@
-import React from "react";
+import ListingForm from "../../components/ListingForm/ListingForm";
 
 function CreateListingPage() {
-  return <div>CreateListingPage</div>;
+  return (
+    <div>
+      CreateListingPage <ListingForm />
+    </div>
+  );
 }
 
 export default CreateListingPage;
