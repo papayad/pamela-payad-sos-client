@@ -20,7 +20,7 @@
   }
 
   &__img-placeholder {
-    border: solid;
+    border: solid $sos-dark-pink;
     border-radius: 1.25rem;
     padding: 1rem;
     width: 17rem;
@@ -65,7 +65,7 @@
 
   &__dropdown {
     border: none;
-    border-bottom: solid;
+    border-bottom: solid $sos-dark-pink;
     padding: 1rem 0.5rem;
   }
 
@@ -82,7 +82,7 @@
     width: 95%;
     padding: 0.5rem;
     border: none;
-    border-bottom: solid;
+    border-bottom: solid $sos-dark-pink;
   }
 
   &__button {

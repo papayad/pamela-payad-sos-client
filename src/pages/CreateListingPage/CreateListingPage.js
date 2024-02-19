@@ -3,7 +3,7 @@ import ListingForm from "../../components/ListingForm/ListingForm";
 function CreateListingPage() {
   return (
     <div>
-      CreateListingPage <ListingForm />
+      <ListingForm />
     </div>
   );
 }
