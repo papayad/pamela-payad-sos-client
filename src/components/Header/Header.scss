@@ -5,12 +5,12 @@
 
 .header {
   background-color: $sos-white;
-  height: 25vh;
+  height: 6rem;
   position: relative;
 
   @include desktop {
     display: flex;
-    height: 25vh;
+    height: 7rem;
   }
 
   &__logo {

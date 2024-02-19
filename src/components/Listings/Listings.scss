@@ -1,0 +1,14 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  @include tablet-desktop {
+    justify-content: center;
+  }
+}

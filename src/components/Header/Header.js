@@ -2,7 +2,7 @@ import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 // replace with actual icon
-import sosLogo from "../../assets/icons/image0.webp";
+import sosLogo from "../../assets/logo/Asset 1.svg";
 
 function Header() {
   return (
@@ -10,11 +10,7 @@ function Header() {
       <header className="header">
         <div className="header__logo">
           <Link to={"/"}>
-            <img
-              className="header__logo-img"
-              src={sosLogo}
-              alt="sonnys on sale logo"
-            />
+            <img className="header__logo-img" src={sosLogo} alt="sonnys on sale logo" />
           </Link>
         </div>
         <div className="header__menu--mobile">

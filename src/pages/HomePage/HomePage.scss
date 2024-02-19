@@ -1,0 +1,13 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.home {
+  &__heading {
+    padding: 4rem 1rem 2rem;
+
+    @include tablet-desktop {
+    }
+  }
+}

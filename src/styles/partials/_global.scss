@@ -37,3 +37,13 @@ h2 {
     line-height: 2rem;
   }
 }
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.75rem;
+
+  @include tablet-desktop {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
