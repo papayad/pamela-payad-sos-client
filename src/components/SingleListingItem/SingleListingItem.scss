@@ -10,7 +10,10 @@
   border-radius: 25px;
   margin: 2rem;
   width: 20rem;
-  justify-content: center;
+
+  &__link {
+    text-decoration: none;
+  }
 
   &__img {
     height: 15rem;
