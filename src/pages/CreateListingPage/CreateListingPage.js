@@ -1,8 +1,9 @@
 import ListingForm from "../../components/ListingForm/ListingForm";
+import "./CreateListingPage.scss";
 
 function CreateListingPage() {
   return (
-    <div>
+    <div className="create-listing">
       <ListingForm formHeading="create listing" formButton="post" />
     </div>
   );

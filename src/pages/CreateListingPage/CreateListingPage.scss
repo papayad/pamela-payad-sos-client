@@ -1,0 +1,15 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.create-listing {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+
+  @include tablet-desktop {
+    width: 100%;
+    margin: auto;
+  }
+}
