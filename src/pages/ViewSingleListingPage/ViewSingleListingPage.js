@@ -31,8 +31,10 @@ function ViewSingleListingPage() {
         <h3 className="single-listing__heading">details</h3>
         <p className="single-listing__details-text">series: {singleListingData.series}</p>
         <p className="single-listing__details-text">name: {singleListingData.name}</p>
-        <p className="single-listing__details-text">price: </p>
-        <p className="single-listing__details-text">contact: </p>
+        <p className="single-listing__details-text">price: {singleListingData.price}</p>
+        <p className="single-listing__details-text">
+          contact: {singleListingData.contact}
+        </p>
       </div>
     </article>
   );
