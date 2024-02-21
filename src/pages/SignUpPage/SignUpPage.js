@@ -3,7 +3,7 @@ import "./SignUpPage.scss";
 
 function SignUpPage() {
   return (
-    <div>
+    <div className="sign-up">
       <AuthForm formHeading="sign up" formButton="sign up" />
     </div>
   );
