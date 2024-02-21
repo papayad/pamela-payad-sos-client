@@ -13,7 +13,7 @@ function ViewSingleListingPage() {
 
   const getSingleListingData = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/listings/${id}`);
+      const response = await axios.get(`${baseUrl}/listings/${id}`);
       setSingleListingData(response.data);
     } catch (error) {
       console.log("Error fetching listing details", error);
