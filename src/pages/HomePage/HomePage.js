@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import Listings from "../../components/Listings/Listings";
 import SingleListingItem from "../../components/SingleListingItem/SingleListingItem";
 import "./HomePage.scss";
+import axios from "axios";
 
 function HomePage() {
   return (

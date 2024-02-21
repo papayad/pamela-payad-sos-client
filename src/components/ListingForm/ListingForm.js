@@ -4,7 +4,7 @@ function ListingForm({ formHeading, formButton }) {
   return (
     <form className="form">
       <div className="form__container">
-        <h2 className="form__heading">create listing {formHeading}</h2>
+        <h2 className="form__heading">{formHeading}</h2>
         <div className="form__details">
           <div className="form__img-placeholder">(img here)</div>
           <div className="form__details-inputs-container">
@@ -51,7 +51,7 @@ function ListingForm({ formHeading, formButton }) {
                 placeholder="e-mail"
               />
             </div>
-            <button className="form__button">post{formButton}</button>
+            <button className="form__button">{formButton}</button>
           </div>
         </div>
       </div>

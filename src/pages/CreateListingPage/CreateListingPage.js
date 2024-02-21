@@ -3,7 +3,7 @@ import ListingForm from "../../components/ListingForm/ListingForm";
 function CreateListingPage() {
   return (
     <div>
-      <ListingForm />
+      <ListingForm formHeading="create listing" formButton="post" />
     </div>
   );
 }
