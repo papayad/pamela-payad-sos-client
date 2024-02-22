@@ -1,8 +1,9 @@
+import { eventWrapper } from "@testing-library/user-event/dist/utils";
 import "./ListingForm.scss";
 
-function ListingForm({ formHeading, formButton }) {
+function ListingForm({ formHeading, formButton, handleSubmit, handleChange }) {
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <div className="form__container">
         <h2 className="form__heading">{formHeading}</h2>
         <div className="form__details">
@@ -13,9 +14,20 @@ function ListingForm({ formHeading, formButton }) {
               <label className="form__label" htmlFor="series">
                 choose series
               </label>
-              <select className="form__dropdown" name="series" id="seriesId">
+              <select
+                className="form__dropdown"
+                name="series"
+                id="seriesId"
+                onChange={handleChange}
+              >
                 <option className="form__option" value="">
                   Please select
+                </option>
+                <option className="form__option" value="Charm Candy Store (2023)">
+                  Charm Candy Store (2023)
+                </option>
+                <option className="form__option" value="Gifts of Love (2023)">
+                  Gifts of Love (2023)
                 </option>
               </select>
             </div>
@@ -23,9 +35,20 @@ function ListingForm({ formHeading, formButton }) {
               <label className="form__label" htmlFor="series">
                 choose name
               </label>
-              <select className="form__dropdown" name="name" id="nameId">
+              <select
+                className="form__dropdown"
+                name="name"
+                id="nameId"
+                onChange={handleChange}
+              >
                 <option className="form__option" value="">
                   Please select
+                </option>
+                <option className="form__option" value="Peach Bear">
+                  Peach Bear
+                </option>
+                <option className="form__option" value="Love Lop Ear Rabbit">
+                  Love Lop Ear Rabbit
                 </option>
               </select>
             </div>
@@ -39,6 +62,7 @@ function ListingForm({ formHeading, formButton }) {
                 min="1"
                 step="any"
                 placeholder="$"
+                onChange={handleChange}
               />
             </div>
             <div className="form__input-container">
@@ -46,12 +70,15 @@ function ListingForm({ formHeading, formButton }) {
               <input
                 className="form__email"
                 type="email"
-                name="email"
-                id="emailid"
-                placeholder="e-mail"
+                name="contact"
+                id="contactId"
+                placeholder="pp@yipee.ca"
+                onChange={handleChange}
               />
             </div>
-            <button className="form__button">{formButton}</button>
+            <button className="form__button" type="submit">
+              {formButton}
+            </button>
           </div>
         </div>
       </div>
