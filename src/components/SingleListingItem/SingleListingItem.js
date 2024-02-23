@@ -1,12 +1,15 @@
 import "./SingleListingItem.scss";
 import listingImg from "../../assets/images/peach-bear.png";
 import openListingIcon from "../../assets/icons/chevron_right_FILL0_wght400_GRAD0_opsz24.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function SingleListingItem({ listing, handleDeleteClick }) {
+  const location = useLocation();
+  const currentPage = location.pathname;
+
   return (
     <article className="card">
-      {listing.user_id === 1 ? (
+      {listing.user_id === 1 && currentPage === "/mylistings" ? (
         <div className="card__btn-container">
           <Link className="card__btn-edit" to={`/listings/edit/${listing.id}`}>
             edit
