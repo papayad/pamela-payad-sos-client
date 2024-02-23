@@ -8,6 +8,7 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 function Listings() {
   const baseUrl = REACT_APP_SERVER_URL;
+
   const [listingsData, setListingsData] = useState([]);
   const [user1ListingData, setUser1ListingData] = useState([]);
 
@@ -38,20 +39,13 @@ function Listings() {
   const location = useLocation();
   const currentPage = location.pathname;
 
-  const handleDeleteClick = async () => {
-    console.log("byebyee");
-  };
-
   return (
     <ul className="list">
       {currentPage === "/"
         ? listingsData.map((listing) => {
             return (
               <li className="list__item" key={listing.id}>
-                <SingleListingItem
-                  listing={listing}
-                  handleDeleteClick={handleDeleteClick}
-                />
+                <SingleListingItem listing={listing} />
               </li>
             );
           })

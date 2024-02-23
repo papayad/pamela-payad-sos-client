@@ -62,10 +62,4 @@
     background-color: $sos-yellow;
     padding: 0.5rem 1rem;
   }
-
-  &__btn-del {
-    @extend .card__btn-edit;
-    background-color: $sos-red;
-    color: $sos-white;
-  }
 }

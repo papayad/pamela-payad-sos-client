@@ -11,9 +11,6 @@ function SingleListingItem({ listing, handleDeleteClick }) {
           <Link className="card__btn-edit" to={`/listings/edit/${listing.id}`}>
             edit
           </Link>
-          <button className="card__btn-del" onClick={handleDeleteClick}>
-            delete
-          </button>
         </div>
       ) : (
         ""

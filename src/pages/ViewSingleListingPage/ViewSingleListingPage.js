@@ -52,18 +52,20 @@ function ViewSingleListingPage() {
         </div>
         <div className="single-listing__btn-container">
           {singleListingData.user_id === 1 ? (
-            <Link
-              className="single-listing__btn-edit"
-              to={`/listings/edit/${singleListingData.id}`}
-            >
-              edit
-            </Link>
+            <>
+              <Link
+                className="single-listing__btn-edit"
+                to={`/listings/edit/${singleListingData.id}`}
+              >
+                edit
+              </Link>
+              <button className="single-listing__btn-del" onClick={handleDeleteClick}>
+                delete
+              </button>
+            </>
           ) : (
             ""
           )}
-          <button className="card__btn-del" onClick={handleDeleteClick}>
-            delete
-          </button>
         </div>
       </div>
     </article>
