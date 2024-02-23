@@ -8,6 +8,7 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 function Listings() {
   const baseUrl = REACT_APP_SERVER_URL;
+
   const [listingsData, setListingsData] = useState([]);
   const [user1ListingData, setUser1ListingData] = useState([]);
 
