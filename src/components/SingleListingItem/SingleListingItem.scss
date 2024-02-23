@@ -47,4 +47,21 @@
     width: 2rem;
     filter: invert(100%);
   }
+
+  &__btn-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: $sos-white;
+    border-radius: 20px 20px 0 0;
+  }
+
+  &__btn-edit {
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    color: $sos-black;
+    background-color: $sos-yellow;
+    padding: 0.5rem 1rem;
+  }
 }
