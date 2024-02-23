@@ -14,7 +14,7 @@ function CreateListingPage() {
     series: "",
     name: "",
     price: "",
-    contact: "pp@yipee.ca",
+    contact: "",
     user_id: 1,
   });
 

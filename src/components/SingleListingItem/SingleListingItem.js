@@ -18,7 +18,11 @@ function SingleListingItem({ listing }) {
             />
           </div>
           <p className="card__series">{listing.series}</p>
-          {/* <h3 className="card__poster">listing by papayad{listing.user}</h3> */}
+          {listing.user_id === 1 ? (
+            <Link to={`/listings/edit/${listing.id}`}>edit</Link>
+          ) : (
+            ""
+          )}
         </div>
       </Link>
       {/* link icon */}

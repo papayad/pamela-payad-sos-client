@@ -1,6 +1,6 @@
 import "./ViewSingleListingPage.scss";
 import listingImg from "../../assets/images/peach-bear.png";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -35,6 +35,12 @@ function ViewSingleListingPage() {
         <p className="single-listing__details-text">
           contact: {singleListingData.contact}
         </p>
+
+        {singleListingData.user_id === 1 ? (
+          <Link to={`/listings/edit/${singleListingData.id}`}>edit</Link>
+        ) : (
+          ""
+        )}
       </div>
     </article>
   );

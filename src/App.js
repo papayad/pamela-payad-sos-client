@@ -21,7 +21,7 @@ function App() {
         <Route path="/listings/:id" element={<ViewSingleListingPage />} />
         <Route path="/createlisting" element={<CreateListingPage />} />
         <Route path="/mylistings" element={<MyListingsPage />} />
-        <Route path="/mylistings/edit/:id" element={<EditMyListingPage />} />
+        <Route path="/listings/edit/:id" element={<EditMyListingPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
