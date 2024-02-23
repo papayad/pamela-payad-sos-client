@@ -19,6 +19,7 @@ function ListingForm({ formHeading, formButton, handleSubmit, handleChange }) {
                 name="series"
                 id="seriesId"
                 onChange={handleChange}
+                required
               >
                 <option className="form__option" value="">
                   Please select
@@ -40,6 +41,7 @@ function ListingForm({ formHeading, formButton, handleSubmit, handleChange }) {
                 name="name"
                 id="nameId"
                 onChange={handleChange}
+                required
               >
                 <option className="form__option" value="">
                   Please select
@@ -63,6 +65,7 @@ function ListingForm({ formHeading, formButton, handleSubmit, handleChange }) {
                 step="any"
                 placeholder="$"
                 onChange={handleChange}
+                required
               />
             </div>
             <div className="form__input-container">
@@ -72,8 +75,9 @@ function ListingForm({ formHeading, formButton, handleSubmit, handleChange }) {
                 type="email"
                 name="contact"
                 id="contactId"
-                placeholder="pp@yipee.ca"
+                placeholder="e-mail"
                 onChange={handleChange}
+                required
               />
             </div>
             <button className="form__button" type="submit">

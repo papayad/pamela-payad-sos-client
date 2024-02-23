@@ -15,7 +15,6 @@ function Listings() {
     try {
       const response = await axios.get(`${baseUrl}/listings`);
       setListingsData(response.data);
-      console.log(response);
     } catch (error) {
       console.log("Error fetching listings ", error);
     }
@@ -25,6 +24,7 @@ function Listings() {
     try {
       const response = await axios.get(`${baseUrl}/users/1/listings`);
       setUser1ListingData(response.data);
+      console.log(response.data);
     } catch (error) {
       console.log("Error fetching listings ", error);
     }
