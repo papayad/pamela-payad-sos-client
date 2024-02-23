@@ -38,13 +38,20 @@ function Listings() {
   const location = useLocation();
   const currentPage = location.pathname;
 
+  const handleDeleteClick = async () => {
+    console.log("byebyee");
+  };
+
   return (
     <ul className="list">
       {currentPage === "/"
         ? listingsData.map((listing) => {
             return (
               <li className="list__item" key={listing.id}>
-                <SingleListingItem listing={listing} />
+                <SingleListingItem
+                  listing={listing}
+                  handleDeleteClick={handleDeleteClick}
+                />
               </li>
             );
           })
