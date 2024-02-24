@@ -40,6 +40,20 @@
     }
   }
 
+  &__img {
+    height: 13rem;
+    object-fit: contain;
+    margin: 1rem;
+
+    @include tablet-desktop {
+      height: 14rem;
+    }
+
+    @include desktop {
+      height: 18rem;
+    }
+  }
+
   &__details {
     display: flex;
     flex-direction: column;

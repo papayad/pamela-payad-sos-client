@@ -30,6 +30,7 @@ function SingleListingItem({ listing, handleDeleteClick }) {
             />
           </div>
           <p className="card__series">{listing.series}</p>
+          <p className="card__series">{listing.contact}</p>
         </div>
       </Link>
     </article>

@@ -25,7 +25,7 @@ function EditMyListingPage() {
       const response = await axios.get(`${baseUrl}/listings/${id}`);
       // console.log(response.data);
 
-      // set initial values
+      // get initial values
       const listingData = response.data;
       console.log(listingData);
       setEditListing({
@@ -36,6 +36,7 @@ function EditMyListingPage() {
         contact: listingData.contact,
         user_id: 1,
       });
+      console.log(editListing);
     } catch (error) {
       console.log("Error fetching listing ", error);
     }
@@ -43,7 +44,7 @@ function EditMyListingPage() {
 
   useEffect(() => {
     getListingData();
-    console.log(editListing);
+    console.log("listing " + editListing);
   }, [id]);
 
   const handleChange = (event) => {
@@ -74,6 +75,7 @@ function EditMyListingPage() {
         formButton="update"
         handleSubmit={handleSubmit}
         handleChange={handleChange}
+        initialValues={editListing}
       />
     </div>
   );
