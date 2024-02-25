@@ -1,7 +1,7 @@
+import { Link, useLocation } from "react-router-dom";
 import "./SingleListingItem.scss";
 import listingImg from "../../assets/images/peach-bear.png";
 import openListingIcon from "../../assets/icons/chevron_right_FILL0_wght400_GRAD0_opsz24.png";
-import { Link, useLocation } from "react-router-dom";
 
 function SingleListingItem({ listing }) {
   const location = useLocation();
