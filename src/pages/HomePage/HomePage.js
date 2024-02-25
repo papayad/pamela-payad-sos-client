@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import Listings from "../../components/Listings/Listings";
 import "./HomePage.scss";
-import axios from "axios";
 
 function HomePage() {
   return (

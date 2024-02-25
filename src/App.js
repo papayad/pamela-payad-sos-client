@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.scss";
 import HomePage from "./pages/HomePage/HomePage";
 import SignUpPage from "./pages/SignUpPage/SignUpPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import ViewSingleListingPage from "./pages/ViewSingleListingPage/ViewSingleListingPage";
 import CreateListingPage from "./pages/CreateListingPage/CreateListingPage";
 import MyListingsPage from "./pages/MyListingsPage/MyListingsPage";
+import ViewSingleListingPage from "./pages/ViewSingleListingPage/ViewSingleListingPage";
 import EditMyListingPage from "./pages/EditMyListingPage/EditMyListingPage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import "./App.scss";
 
 function App() {
   return (

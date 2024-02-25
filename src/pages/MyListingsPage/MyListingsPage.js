@@ -1,5 +1,5 @@
-import "./MyListingsPage.scss";
 import Listings from "../../components/Listings/Listings";
+import "./MyListingsPage.scss";
 
 function MyListingsPage() {
   return (

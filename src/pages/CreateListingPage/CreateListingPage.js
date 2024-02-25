@@ -1,10 +1,10 @@
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import ListingForm from "../../components/ListingForm/ListingForm";
 import "./CreateListingPage.scss";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -25,6 +25,7 @@ function CreateListingPage() {
   const handleChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
+
     setCreateListing({ ...createListing, [name]: value });
     setSelectedSeriesImg(event.target.value);
   };

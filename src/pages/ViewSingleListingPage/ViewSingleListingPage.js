@@ -1,10 +1,10 @@
-import "./ViewSingleListingPage.scss";
-import listingImg from "../../assets/images/peach-bear.png";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import "./ViewSingleListingPage.scss";
+import listingImg from "../../assets/images/peach-bear.png";
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
