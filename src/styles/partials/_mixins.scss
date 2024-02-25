@@ -1,0 +1,19 @@
+@use "../partials/typography" as *;
+@use "../partials/variables" as *;
+
+@mixin tablet-desktop {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin nav-type {
+  font-size: 1.25rem;
+  font-weight: 500;
+}

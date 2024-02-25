@@ -1,0 +1,16 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.edit-listing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+
+  @include tablet-desktop {
+    width: 100%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,21 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: $sos-blue;
+  color: white;
+  margin: 10rem 0 0 0;
+
+  &__logo-img {
+    margin: 2rem;
+    height: 3rem;
+  }
+
+  &__copyright {
+    font-size: 0.75rem;
+  }
+}

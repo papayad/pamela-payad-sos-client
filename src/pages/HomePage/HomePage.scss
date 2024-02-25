@@ -1,0 +1,15 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.home {
+  @include desktop {
+    max-width: $desktop-breakpoint;
+    margin: auto;
+  }
+
+  &__heading {
+    padding: 4rem 2rem 1rem;
+  }
+}
