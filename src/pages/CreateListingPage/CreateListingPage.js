@@ -53,6 +53,7 @@ function CreateListingPage() {
         formButton="post"
         handleSubmit={handleSubmit}
         handleChange={handleChange}
+        initialValues={createListing}
       />
     </div>
   );

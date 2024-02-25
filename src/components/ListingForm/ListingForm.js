@@ -22,7 +22,19 @@ function ListingForm({
             <img className="form__img" src={listingImg} alt="sonny angel peach bear" />
           </div>
           <div className="form__details-inputs-container">
-            <h3 className="form__details-heading">details</h3>
+            <div className="form__initial-data-container">
+              <h3
+                className="form__heading-details
+              "
+              >
+                current listing details
+              </h3>
+              <p className="form__info">series: {initialValues.series}</p>
+              <p className="form__info">name: {initialValues.name}</p>
+              <p className="form__info">price: {initialValues.price}</p>
+              <p className="form__info">contact: {initialValues.contact}</p>
+            </div>
+            <h3 className="form__details-heading">edit details</h3>
             <div className="form__input-container">
               <label className="form__label" htmlFor="series">
                 choose series
