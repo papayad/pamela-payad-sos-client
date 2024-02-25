@@ -83,11 +83,19 @@
     text-decoration: none;
     color: black;
 
+    &:hover {
+      color: $sos-dark-pink;
+    }
+
     &--signup {
       @extend .header__nav-link;
       border-radius: 0.25rem;
       padding: 0.5rem 1rem;
       background-color: $sos-yellow;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 }

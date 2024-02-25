@@ -1,7 +1,6 @@
 import { useLocation, useParams } from "react-router-dom";
 import listingImg from "../../assets/images/peach-bear.png";
 import "./ListingForm.scss";
-import { useState } from "react";
 
 function ListingForm({
   formHeading,

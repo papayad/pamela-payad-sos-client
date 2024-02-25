@@ -3,6 +3,8 @@ import ListingForm from "../../components/ListingForm/ListingForm";
 import "./EditMyListingPage.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -57,7 +59,20 @@ function EditMyListingPage() {
       console.log("Error updating listing ", error);
     }
 
-    navigate("/");
+    toast.success("Listing edited!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
   };
 
   return (
@@ -68,6 +83,18 @@ function EditMyListingPage() {
         handleSubmit={handleSubmit}
         handleChange={handleChange}
         initialValues={editListing}
+      />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
       />
     </div>
   );

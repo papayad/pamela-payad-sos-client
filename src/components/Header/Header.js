@@ -1,7 +1,6 @@
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import "./Header.scss";
-// replace with actual icon
 import sosLogo from "../../assets/logo/Asset 1.svg";
 
 function Header() {

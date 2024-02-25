@@ -11,6 +11,12 @@
   margin: 1.5rem;
   width: 20rem;
 
+  &:hover {
+    border: 5px solid $sos-yellow;
+    transform: translate(0, -0.5rem);
+    transition-duration: 0.2s;
+  }
+
   &__link {
     text-decoration: none;
   }

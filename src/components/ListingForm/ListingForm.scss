@@ -124,9 +124,15 @@
     width: 100%;
     padding: 0.5rem;
     border-radius: 20px;
-    border: 3px solid $sos-dark-pink;
+    border: 3px solid $sos-pink;
     background-color: $sos-pink;
     color: white;
+
+    &:hover {
+      color: $sos-dark-pink;
+      background-color: transparent;
+      transition: all 0.3s ease;
+    }
 
     @include tablet-desktop {
       width: 10rem;

@@ -3,6 +3,8 @@ import ListingForm from "../../components/ListingForm/ListingForm";
 import "./CreateListingPage.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -47,7 +49,20 @@ function CreateListingPage() {
       console.log("Error creating new listing ", error);
     }
 
-    navigate("/");
+    toast.success("Listing posted!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
   };
 
   return (
@@ -59,6 +74,18 @@ function CreateListingPage() {
         handleChange={handleChange}
         initialValues={createListing}
         selectedSeriesImg={selectedSeriesImg}
+      />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
       />
     </div>
   );
