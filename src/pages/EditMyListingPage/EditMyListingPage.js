@@ -1,8 +1,10 @@
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import ListingForm from "../../components/ListingForm/ListingForm";
 import "./EditMyListingPage.scss";
-import { useEffect, useState } from "react";
-import axios from "axios";
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -23,9 +25,8 @@ function EditMyListingPage() {
   const getListingData = async () => {
     try {
       const response = await axios.get(`${baseUrl}/listings/${id}`);
-
-      // get initial values
       const listingData = response.data;
+
       setEditListing({
         id: id,
         series: listingData.series,
@@ -48,20 +49,30 @@ function EditMyListingPage() {
     setEditListing({ ...editListing, [name]: value });
   };
 
-  // send new info
   const handleSubmit = async (event) => {
     event.preventDefault();
     const { ...updatedData } = editListing;
 
-    console.log(updatedData);
     try {
-      console.log(id);
       const response = await axios.patch(`${baseUrl}/listings/edit/${id}`, updatedData);
     } catch (error) {
       console.log("Error updating listing ", error);
     }
 
-    navigate("/");
+    toast.success("Listing edited!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
   };
 
   return (
@@ -72,6 +83,18 @@ function EditMyListingPage() {
         handleSubmit={handleSubmit}
         handleChange={handleChange}
         initialValues={editListing}
+      />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
       />
     </div>
   );

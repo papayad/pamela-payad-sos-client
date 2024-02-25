@@ -1,8 +1,8 @@
-import "./Listings.scss";
-import SingleListingItem from "../SingleListingItem/SingleListingItem";
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import SingleListingItem from "../SingleListingItem/SingleListingItem";
+import "./Listings.scss";
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 

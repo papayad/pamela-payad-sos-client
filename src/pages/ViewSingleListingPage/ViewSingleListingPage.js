@@ -1,8 +1,10 @@
-import "./ViewSingleListingPage.scss";
-import listingImg from "../../assets/images/peach-bear.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import "./ViewSingleListingPage.scss";
+import listingImg from "../../assets/images/peach-bear.png";
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -32,7 +34,20 @@ function ViewSingleListingPage() {
       console.log("Error deleting listing", error);
     }
 
-    navigate("/");
+    toast.success("Listing deleted!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
   };
 
   return (
@@ -70,6 +85,18 @@ function ViewSingleListingPage() {
           )}
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </article>
   );
 }
