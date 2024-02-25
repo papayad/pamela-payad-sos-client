@@ -18,9 +18,13 @@ function CreateListingPage() {
     user_id: 1,
   });
 
+  const [selectedSeriesImg, setSelectedSeriesImg] = useState("");
+
   const handleChange = (event) => {
+    event.preventDefault();
     const { name, value } = event.target;
     setCreateListing({ ...createListing, [name]: value });
+    setSelectedSeriesImg(event.target.value);
   };
 
   const handleSubmit = async (event) => {
@@ -54,6 +58,7 @@ function CreateListingPage() {
         handleSubmit={handleSubmit}
         handleChange={handleChange}
         initialValues={createListing}
+        selectedSeriesImg={selectedSeriesImg}
       />
     </div>
   );

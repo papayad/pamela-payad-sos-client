@@ -1,6 +1,7 @@
 import { useLocation, useParams } from "react-router-dom";
 import listingImg from "../../assets/images/peach-bear.png";
 import "./ListingForm.scss";
+import { useState } from "react";
 
 function ListingForm({
   formHeading,
@@ -31,7 +32,7 @@ function ListingForm({
               </h3>
               <p className="form__info">series: {initialValues.series}</p>
               <p className="form__info">name: {initialValues.name}</p>
-              <p className="form__info">price: {initialValues.price}</p>
+              <p className="form__info">price: ${initialValues.price}</p>
               <p className="form__info">contact: {initialValues.contact}</p>
             </div>
             <h3 className="form__details-heading">edit details</h3>
