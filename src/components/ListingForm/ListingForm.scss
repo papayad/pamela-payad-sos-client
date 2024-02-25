@@ -40,6 +40,28 @@
     }
   }
 
+  &__img {
+    height: 13rem;
+    object-fit: contain;
+    margin: 1rem;
+
+    @include tablet-desktop {
+      height: 14rem;
+    }
+
+    @include desktop {
+      height: 18rem;
+    }
+  }
+
+  &__initial-data-container {
+    margin: 1rem 0;
+    padding: 16px;
+    border: 4px solid $sos-dark-pink;
+    border-radius: 20px;
+    background-color: $sos-pink;
+  }
+
   &__details {
     display: flex;
     flex-direction: column;

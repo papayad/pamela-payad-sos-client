@@ -45,7 +45,9 @@ function ViewSingleListingPage() {
             series: {singleListingData.series}
           </p>
           <p className="single-listing__details-text">name: {singleListingData.name}</p>
-          <p className="single-listing__details-text">price: {singleListingData.price}</p>
+          <p className="single-listing__details-text">
+            price: ${singleListingData.price}
+          </p>
           <p className="single-listing__details-text">
             contact: {singleListingData.contact}
           </p>

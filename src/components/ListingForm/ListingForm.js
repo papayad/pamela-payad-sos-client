@@ -1,15 +1,41 @@
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
+import { useLocation, useParams } from "react-router-dom";
+import listingImg from "../../assets/images/peach-bear.png";
 import "./ListingForm.scss";
+import { useState } from "react";
 
-function ListingForm({ formHeading, formButton, handleSubmit, handleChange }) {
+function ListingForm({
+  formHeading,
+  formButton,
+  handleSubmit,
+  handleChange,
+  initialValues,
+}) {
+  const { id } = useParams();
+  const location = useLocation();
+  const currentPage = location.pathname;
+
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__container">
         <h2 className="form__heading">{formHeading}</h2>
         <div className="form__details">
-          <div className="form__img-placeholder">(img here)</div>
+          <div className="form__img-placeholder">
+            <img className="form__img" src={listingImg} alt="sonny angel peach bear" />
+          </div>
           <div className="form__details-inputs-container">
-            <h3 className="form__details-heading">details</h3>
+            <div className="form__initial-data-container">
+              <h3
+                className="form__heading-details
+              "
+              >
+                current listing details
+              </h3>
+              <p className="form__info">series: {initialValues.series}</p>
+              <p className="form__info">name: {initialValues.name}</p>
+              <p className="form__info">price: ${initialValues.price}</p>
+              <p className="form__info">contact: {initialValues.contact}</p>
+            </div>
+            <h3 className="form__details-heading">edit details</h3>
             <div className="form__input-container">
               <label className="form__label" htmlFor="series">
                 choose series
@@ -63,7 +89,9 @@ function ListingForm({ formHeading, formButton, handleSubmit, handleChange }) {
                 id="priceId"
                 min="1"
                 step="any"
-                placeholder="$"
+                placeholder={
+                  currentPage === `/listings/edit/${id}` ? `$${initialValues.price}` : "$"
+                }
                 onChange={handleChange}
                 required
               />
@@ -75,7 +103,11 @@ function ListingForm({ formHeading, formButton, handleSubmit, handleChange }) {
                 type="email"
                 name="contact"
                 id="contactId"
-                placeholder="e-mail"
+                placeholder={
+                  currentPage === `/listings/edit/${id}`
+                    ? initialValues.contact
+                    : "e-mail"
+                }
                 onChange={handleChange}
                 required
               />
