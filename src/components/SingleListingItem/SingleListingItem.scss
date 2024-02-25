@@ -8,11 +8,16 @@
   flex-direction: column;
   border: 4px solid $sos-dark-pink;
   border-radius: 25px;
-  margin: 2rem;
+  margin: 1.5rem;
   width: 20rem;
 
   &__link {
     text-decoration: none;
+  }
+
+  &__img-container {
+    display: flex;
+    justify-content: center;
   }
 
   &__img {

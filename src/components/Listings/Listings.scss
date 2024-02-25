@@ -6,10 +6,7 @@
 .list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
   list-style-type: none;
-
-  @include tablet-desktop {
-    justify-content: center;
-  }
 }

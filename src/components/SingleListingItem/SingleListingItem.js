@@ -19,7 +19,9 @@ function SingleListingItem({ listing }) {
         ""
       )}
       <Link className="card__link" to={`/listings/${listing.id}`}>
-        <img className="card__img" src={listingImg} alt="peach bear sonny angel" />
+        <div className="card__img-container">
+          <img className="card__img" src={listingImg} alt="peach bear sonny angel" />
+        </div>
         <div className="card__info-container">
           <div className="card__details-container">
             <h2 className="card__heading">{listing.name}</h2>

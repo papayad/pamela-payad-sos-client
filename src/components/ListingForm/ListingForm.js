@@ -17,7 +17,7 @@ function ListingForm({
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__container">
-        <h2 className="form__heading">{formHeading}</h2>
+        <h1 className="form__heading">{formHeading}</h1>
         <div className="form__details">
           <div className="form__img-placeholder">
             <img className="form__img" src={listingImg} alt="sonny angel peach bear" />

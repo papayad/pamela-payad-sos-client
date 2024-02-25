@@ -23,9 +23,8 @@ function EditMyListingPage() {
   const getListingData = async () => {
     try {
       const response = await axios.get(`${baseUrl}/listings/${id}`);
-
-      // get initial values
       const listingData = response.data;
+
       setEditListing({
         id: id,
         series: listingData.series,
@@ -48,14 +47,11 @@ function EditMyListingPage() {
     setEditListing({ ...editListing, [name]: value });
   };
 
-  // send new info
   const handleSubmit = async (event) => {
     event.preventDefault();
     const { ...updatedData } = editListing;
 
-    console.log(updatedData);
     try {
-      console.log(id);
       const response = await axios.patch(`${baseUrl}/listings/edit/${id}`, updatedData);
     } catch (error) {
       console.log("Error updating listing ", error);
